@@ -14,7 +14,7 @@
 
 在开始开发集成万傲瑞联应用之前，需要准备如下信息:
 
-#### 获取SDK AppSecret、AppKey、AppAESKey
+* 获取SDK AppSecret、AppKey、AppAESKey
 万傲瑞联应用SDK AppSecret和AppKey、AppAESKey可在[万傲瑞联控制台](https://www.zkbiocloud.com/) 的应用信息里获取，如您尚未添加应用，请到万傲瑞联控制台中添加应用。
 
 # 安装
