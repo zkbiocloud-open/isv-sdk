@@ -1,28 +1,27 @@
 # isv-sdk
+
 帮助垂直行业独立软件开发商(ISV), 快速集成熵基（出入口、身份认证、时间管理） + AIoT能力.
 
 目前万傲瑞联SDK支持以下api接口能力：
 
-基础服务能力
-门禁服务能力
-考勤服务能力
+> 基础服务能力
+> 门禁服务能力
+> 考勤服务能力
 
 # 开发
-准备
+
+### 准备
+
 在开始开发集成万傲瑞联应用之前，需要准备如下信息:
 
  获取SDK AppSecret、AppKey、AppAESKey
-万傲瑞联应用SDK AppSecret和AppKey、AppAESKey可在
-
-[万傲瑞联控制台]: https://www.zkbiocloud.com/	"万傲瑞联控制台"
-
-的应用信息里获取，如您尚未添加应用，请到万傲瑞联控制台中添加应用。
+万傲瑞联应用SDK AppSecret和AppKey、AppAESKey可在[万傲瑞联控制台](https://www.zkbiocloud.com/) 的应用信息里获取，如您尚未添加应用，请到万傲瑞联控制台中添加应用。
 
 # 安装
-isv-sdk可以采用多种方式进行安装，我们提供以下二种方法供用户使用：
 
-### maven
+isv-sdk可以采用多种方式进行安装，我们提供以下三种方法供用户使用：
 
+maven
 要使用isv-sdk功能，需要在pom.xml中添加如下依赖：
 
 ```java
@@ -35,17 +34,16 @@ isv-sdk可以采用多种方式进行安装，我们提供以下二种方法供�
 
 
 
-### 其他
+# 其他
 
 将JAR包直接引入到您的工程中。
 
 文档
 若您对接口存在疑问，可以查阅:
 
-[API开发指南]: https://docs.zkbiocloud.com/pages/9fc896/#%E5%B9%B3%E5%8F%B0%E5%AE%9A%E4%B9%89
-[错误码]: https://docs.zkbiocloud.com/pages/7d3931/
-
-
+> [API开发指南](https://docs.zkbiocloud.com/)
+>
+> [错误码](https://docs.zkbiocloud.com/pages/7d3931/)
 
 # 数据加解密
 
@@ -53,13 +51,15 @@ isv-sdk可以采用多种方式进行安装，我们提供以下二种方法供�
 
 万傲瑞联提供多种数据传输方式，最基础的为使用非加密格式的数据传输，同时提供了数据可加密选项. 开发者可以根据自身的需求选择加密数据传输通信，或者是非加密数据传输通信。
 
-###### 对明文字符串加密并Base64编码
+#### 数据加密
+
+对明文字符串加密并Base64编码
 
 ```java
 String encryptData = EncryptionUtils.AES256Encode("明文字符串", "AppAESKey");
 ```
 
-###### 数据解密
+#### 数据解密
 
 ```java
 String decryptData = EncryptionUtils.AES256Decrypt("加密字符串", "AppAESKey");
