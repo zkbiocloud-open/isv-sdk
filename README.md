@@ -1,12 +1,14 @@
 # isv-sdk
 
+[万傲瑞联官网](https://www.zkbiocloud.com/)
+
 帮助垂直行业独立软件开发商(ISV), 快速集成熵基（出入口、身份认证、时间管理） + AIoT能力.
 
 目前万傲瑞联SDK支持以下api接口能力：
 
-> 基础服务能力
-> 门禁服务能力
-> 考勤服务能力
+> 基础服务能力 <br>
+> 门禁服务能力 <br>
+> 考勤服务能力 <br>
 
 # 开发
 
@@ -14,14 +16,14 @@
 
 在开始开发集成万傲瑞联应用之前，需要准备如下信息:
 
- 获取SDK AppSecret、AppKey、AppAESKey
-万傲瑞联应用SDK AppSecret和AppKey、AppAESKey可在[万傲瑞联控制台](https://www.zkbiocloud.com/) 的应用信息里获取，如您尚未添加应用，请到万傲瑞联控制台中添加应用。
+* 获取SDK的AppSecret、AppKey、AppAESKey <br>
+万傲瑞联应用SDK的AppSecret、AppKey、AppAESKey可在[万傲瑞联控制台](https://www.zkbiocloud.com/) 的应用信息里获取，如您尚未添加应用，请到万傲瑞联控制台中添加应用。
 
 # 安装
 
-isv-sdk可以采用多种方式进行安装，我们提供以下三种方法供用户使用：
+isv-sdk可以采用多种方式进行安装，我们提供以下二种方法供用户使用：
 
-maven
+## maven
 要使用isv-sdk功能，需要在pom.xml中添加如下依赖：
 
 ```java
@@ -34,11 +36,11 @@ maven
 
 
 
-# 其他
+### 其他
 
 将JAR包直接引入到您的工程中。
 
-文档
+# 文档
 若您对接口存在疑问，可以查阅:
 
 > [API开发指南](https://docs.zkbiocloud.com/)

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zkteco</groupId>
     <artifactId>bmp-sdk-api</artifactId>
-    <version>0.0.1-SNAPSHOOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>open-sdk-api</name>
     <description>ZKTECO BioCloud Open API SDK</description>
