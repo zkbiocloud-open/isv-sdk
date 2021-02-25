@@ -10,7 +10,7 @@ public class UrlConstants {
     /**
      * 此处的参数应该是由外部传入
      */
-    public static final String BASE_URL = "http://127.0.0.1:7649";
+    public static final String BASE_URL = "https://api.zkbiocloud.com";
 
     /**
      * 认证授权
@@ -84,4 +84,7 @@ public class UrlConstants {
     //考勤打卡记录
     public static final String PAGE_PUNCH_RECORD = "/open/bmp/attendance/v1/punch/page";
 
+
+    // 健康码
+    public static final String HEALTH_CODE_VERIFY = "/open/bmp/health/v1/healthCode/verify";
 }

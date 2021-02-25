@@ -109,7 +109,7 @@ public abstract class AbstractClient {
                 || ZKMessageErrorCodes.InnerErrorCode.TOKEN_EXPIRED.equals(msgCode)
                 || ZKMessageErrorCodes.InnerErrorCode.TOKEN_INVALID.equals(msgCode)
                 || ZKMessageErrorCodes.InnerErrorCode.TOKEN_EXPIRED_REFRESH.equals(msgCode)) {
-            respMsg = HttpUtils.post(url, requestHeader, accessToken, reqBody);
+            respMsg = HttpUtils.post(url, requestHeader, oauth(), reqBody);
         }
         if (!MessageUtils.isSuccess(respMsg)) {
             throw new ZKSDKException(ZKMessageErrorCodes.SDKErrorCode.ERROR_REQUEST, respMsg.getMessage());
