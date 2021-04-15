@@ -8,8 +8,10 @@ package com.zkteco.open.api;
 import com.zkteco.open.common.AbstractClient;
 import com.zkteco.open.common.Certificate;
 import com.zkteco.open.constant.UrlConstants;
+import com.zkteco.open.model.base.BaseRequest;
 import com.zkteco.open.model.base.Message;
-import com.zkteco.open.model.business.video.request.*;
+import com.zkteco.open.model.business.video.request.tuya.*;
+import com.zkteco.open.model.business.video.request.ys.AddDeviceRequest;
 
 public class VideoServiceClient extends AbstractClient {
 
@@ -23,7 +25,7 @@ public class VideoServiceClient extends AbstractClient {
      * @param request
      * @return com.zkteco.open.model.base.Message
      */
-    public Message syncUser(SyncUserRequest request) {
+    public Message syncUser2TuYa(SyncUserRequest request) {
         return this.internalEncryptionRequest(request, UrlConstants.VIDEO_SYNC_USER);
     }
 
@@ -33,7 +35,7 @@ public class VideoServiceClient extends AbstractClient {
      * @param request
      * @return com.zkteco.open.model.base.Message
      */
-    public Message generateDeviceToken(GenerateDeviceTokenRequest request) {
+    public Message generateDeviceToken2TuYa(GenerateDeviceTokenRequest request) {
         return this.internalEncryptionRequest(request, UrlConstants.VIDEO_GET_DEVICE_TOKEN);
     }
 
@@ -43,7 +45,7 @@ public class VideoServiceClient extends AbstractClient {
      * @param request
      * @return com.zkteco.open.model.base.Message
      */
-    public Message getDeviceTokenResult(GetDeviceTokenResultRequest request) {
+    public Message getDeviceTokenResult2TuYa(GetDeviceTokenResultRequest request) {
         return this.internalEncryptionRequest(request, String.format(UrlConstants.VIDEO_GET_DEVICE_TOKEN_RESULT, request.getToken()));
     }
 
@@ -53,7 +55,7 @@ public class VideoServiceClient extends AbstractClient {
      * @param request
      * @return com.zkteco.open.model.base.Message
      */
-    public Message queryDeviceByUid(QueryVideoDeviceRequest request) {
+    public Message queryDeviceByUid2TuYa(QueryVideoDeviceRequest request) {
         return this.internalEncryptionRequest(request, String.format(UrlConstants.VIDEO_LIST_DEVICE_UID, request.getUid()));
     }
 
@@ -63,7 +65,7 @@ public class VideoServiceClient extends AbstractClient {
      * @param request
      * @return com.zkteco.open.model.base.Message
      */
-    public Message deleteDevice(DeleteVideoDeviceRequest request) {
+    public Message deleteDevice2TuYa(DeleteVideoDeviceRequest request) {
         return this.internalEncryptionRequest(request, String.format(UrlConstants.VIDEO_DELETE_DEVICE, request.getDeviceId()));
     }
 
@@ -73,8 +75,27 @@ public class VideoServiceClient extends AbstractClient {
      * @param request
      * @return com.zkteco.open.model.base.Message
      */
-    public Message createHome(CreateHomeRequest request) {
+    public Message createHome2TuYa(CreateHomeRequest request) {
         return this.internalEncryptionRequest(request, UrlConstants.VIDEO_CREATE_HOME);
     }
 
+    /**
+     * 功能描述：获取萤石accessToken
+     *
+     * @param request
+     * @return com.zkteco.open.model.base.Message
+     */
+    public Message getAccessToken2Ys(BaseRequest request) {
+        return this.internalEncryptionRequest(request, UrlConstants.VIDEO_GET_ACCESS_TOKEN_YS);
+    }
+
+    /**
+     * 功能描述：添加萤石设备
+     *
+     * @param request
+     * @return com.zkteco.open.model.base.Message
+     */
+    public Message addDevice2Ys(AddDeviceRequest request) {
+        return internalEncryptionRequest(request, UrlConstants.VIDEO_ADD_DEVICE_YS);
+    }
 }

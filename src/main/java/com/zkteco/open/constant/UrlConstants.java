@@ -89,10 +89,15 @@ public class UrlConstants {
     public static final String HEALTH_CODE_VERIFY = "/open/bmp/health/v1/healthCode/verify";
 
     // 云视频
+    // 涂鸦
     public static final String VIDEO_SYNC_USER = "/open/bmp/video/v1/tuya/syncUser";
     public static final String VIDEO_CREATE_HOME = "/open/bmp/video/v1/tuya/createHome";
     public static final String VIDEO_GET_DEVICE_TOKEN = "/open/bmp/video/v1/tuya/device/token";
     public static final String VIDEO_GET_DEVICE_TOKEN_RESULT = "/open/bmp/video/v1/tuya/device/tokens/%s";
     public static final String VIDEO_LIST_DEVICE_UID = "/open/bmp/video/v1/tuya/device/list/%s";
     public static final String VIDEO_DELETE_DEVICE = "/open/bmp/video/v1/tuya/device/delete/%s";
+    // 萤石
+    public static final String VIDEO_GET_ACCESS_TOKEN_YS = "/open/bmp/video/v1/ys/accessToken";
+    public static final String VIDEO_ADD_DEVICE_YS = "/open/bmp/video/v1/ys/device/add";
+
 }
